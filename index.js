@@ -1,0 +1,131 @@
+function findDuplicate(arr){
+    let seen  = new Set()
+    let duplicate  = new Set()
+
+    for( num of arr){
+        if(seen.has(num)){
+            duplicate.add(num)
+        }else{
+            seen.add(num)
+        }
+    }
+
+    return [...duplicate]
+}
+console.log(findDuplicate([1,2,8,4,9,6,6,7,8,3,]))
+
+function count(arr){
+    let obj = {}
+
+    for(num of arr){
+        obj[num] = (obj[num] || 0)+1
+    }
+
+    return obj
+}
+
+console.log(count([1,2,8,4,9,6,6,7,8,3,]))
+
+function sort(arr){
+
+    let arr2 = new Set(arr)
+    arr2 = [...arr2]
+    arr2.sort((a,b)=>a-b)
+
+    return arr2
+
+}
+
+console.log(sort([1,2,8,4,9,6,6,7,8,3,]))
+
+function fact(n){
+    let factorial = 1
+    for(let i = 1;i<=n;i++){
+        factorial = i*factorial
+    }
+    return factorial
+}
+
+console.log(fact(5))
+
+function fab(n){
+    let a = 0
+    let b = 1
+    for(let i = 1;i<=n;i++){
+        console.log(a)
+        let temp = a+b
+        a = b
+       b = temp
+    }
+
+
+}
+
+console.log(fab(6))
+
+function palindrome(str){
+    let rev = str.split('').reverse().join("")
+
+    return  str===rev
+}
+
+console.log(palindrome("madan"))
+
+const max = (arr)=>{
+
+    let big = 0;
+    for(let i = 0;i<=arr.length;i++){
+        if(i>big){
+            big = arr[i]
+        }
+    }
+
+    return big
+
+
+}
+console.log(max([1,2,3,4,5,6,7,66,8,5,9]))
+
+const vowelCount = (str)=>{
+        const vowels = "aeiou"
+        let count = 0
+
+        for(char of str.toLowerCase()){
+            if(vowels.includes(char)){
+                count++
+            }
+
+        }
+
+        return count
+
+}
+
+console.log(vowelCount("Kaushal"))
+
+
+const charCount = (str)=>{
+    let obj = {}
+    for(char of str){
+        obj[char] = (obj[char] || 0)+1
+    }
+
+    return obj
+}
+
+console.log(charCount("kaushal"))
+
+const Capital = (str)=>{
+    const newstr = str[0].toUpperCase()+str.slice(1)
+    return newstr
+
+}
+
+console.log(Capital("akshay"))
+
+const Flaten = (arr)=>{
+    return arr.flat(Infinity)
+    
+}
+
+console.log(Flaten([123,[45,[678,[34]],7,8,9],[65,9]]))
