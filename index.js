@@ -9,6 +9,7 @@ function findDuplicate(arr){
             seen.add(num)
         }
     }
+    
 
     return [...duplicate]
 }
