@@ -175,4 +175,46 @@ const Min = (arr)=>{
 }
 
 console.log(Min([22,44,22,67,8,2,88,5]))
+let numarr = [22,44,22,67,8,2,88,5]
+
+const sdmin = (arr)=>{
+    let min = Math.min(arr[0],arr[1]) 
+    let smin = Math.max(arr[0],arr[1]) 
+
+    for (let i = 2;i<arr.length;i++){
+        if(arr[i]<min){
+            smin = min;
+            min = arr[i]
+        }
+        else if(arr[i]<smin && arr[i]>min){
+            smin = arr[i]
+
+        }
+    }
+
+
+    console.log(smin)
+}
+sdmin(numarr)
+
+const smax = (arr)=>{
+    let max = Math.max(arr[0],arr[1])
+    let smax = Math.min(arr[0],arr[1])
+
+    for(let i = 2;i<arr.length;i++){
+        if(arr[i]>max){
+            smax = max;
+            max = arr[i]
+        }
+        else if(arr[i]>smax && arr[i]<max){
+            smax = arr[i]
+
+        }
+    }
+
+    console.log(smax)
+
+}
+smax(numarr)
+
 
