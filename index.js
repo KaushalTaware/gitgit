@@ -130,3 +130,21 @@ const Flaten = (arr)=>{
 }
 
 console.log(Flaten([123,[45,[678,[34]],7,8,9],[65,9]]))
+
+
+let arrrr = [1,2,3,4,5,34,14,-65,77,78,93]
+
+
+let a = 0
+let b = arrrr.length-1
+
+while(a !=b){
+ let temp = a;
+ a = b
+ b = temp
+ a++
+ b--
+ 
+}
+
+console.log(arrrr)
