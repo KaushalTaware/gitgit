@@ -139,12 +139,40 @@ let a = 0
 let b = arrrr.length-1
 
 while(a !=b){
- let temp = a;
- a = b
- b = temp
+ let temp = arrrr[a];
+ arrrr[a] = arrrr[b]
+ arrrr[b] = temp
  a++
  b--
  
 }
 
 console.log(arrrr)
+
+let arr2 = [1,0,1,0,0,1,1,0,1,0,1,1];
+let i = 0
+let j = 0
+
+while(i<arr2.length){
+    if(arr2[i]==0){
+        let temp = arr2[i]
+        arr2[i]= arr2[j]
+        arr2[j] = temp
+        j++
+    }
+    i++
+}
+console.log(arr2)
+
+const Min = (arr)=>{
+    let min = arr[0]
+    for(let n of arr){
+        if(arr[n]<min){
+            min = arr[n]
+        }
+    }
+    return min
+}
+
+console.log(Min([22,44,22,67,8,2,88,5]))
+
