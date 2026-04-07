@@ -222,18 +222,44 @@ let ek = [1,2,3,4,5]
 
 
 
-let elem = ak[0]
+for(let i = 1;i<=2;i++){         // k step
+    let elem = ak[0]
 for(let i = 0;i<ak.length-1;i++){
     ak[i] = ak[i+1]
     
 }
 ak[ak.length-1] = elem
+}
 console.log(ak)
 
-let elem2 = ek[ek.length-1]
+for(let i = 1; i<=2;i++){        //k step
+    let elem2 = ek[ek.length-1]
 for(let i = ek.length-1;i>0;i--){
     ek[i] = ek[i-1]
 }
 
 ek[0] = elem2
+}
 console.log(ek)
+
+let arr = [1,2,3,4,5]
+let k = Number(prompt("enter a number: "))
+
+k = k% arr.length
+reverse(0,arr.length-1)// call at end
+reverse(k,arr.length-1) // for left just change call of function 1 to 3 and 3 to 1
+reverse(0,k-1)           // call at first
+function reverse(i,j){
+  while(i<j){
+        temp = arr[i];
+    arr[i] = arr[j]
+    arr[j]  =temp
+    i++
+    j--
+    
+}
+      
+  
+}
+
+console.log(arr)
