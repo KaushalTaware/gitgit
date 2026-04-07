@@ -217,4 +217,23 @@ const smax = (arr)=>{
 }
 smax(numarr)
 
+let ak = [1,2,3,4,5]
+let ek = [1,2,3,4,5]
 
+
+
+let elem = ak[0]
+for(let i = 0;i<ak.length-1;i++){
+    ak[i] = ak[i+1]
+    
+}
+ak[ak.length-1] = elem
+console.log(ak)
+
+let elem2 = ek[ek.length-1]
+for(let i = ek.length-1;i>0;i--){
+    ek[i] = ek[i-1]
+}
+
+ek[0] = elem2
+console.log(ek)
